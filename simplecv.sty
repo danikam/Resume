@@ -14,6 +14,7 @@
 \usepackage{graphicx}                       % Importing graphics
 \usepackage[export]{adjustbox}              % Aligning margins
 
+
 % % Chinese
 % \usepackage{xeCJK}
 % \setCJKmainfont{BabelStone Han}
@@ -92,9 +93,13 @@
 
 % Two-columns
 \newcommand{\sidebyside}[2]{
-    \begin{multicols}{2}
-    #1 \columnbreak
-    #2 \end{multicols}
+    \begin{minipage}[t][3cm][t]{0.65\linewidth}
+    #1 
+    \end{minipage} %
+    \hfill\
+    \begin{minipage}[t][3cm][t]{0.25\linewidth}
+    #2 
+    \end{minipage}
 }
 
 % Section titles
